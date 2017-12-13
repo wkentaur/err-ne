@@ -29,7 +29,7 @@ def analyzeText(in_text, n_id, db, cursor):
 				new_word = ne_word
 				if ( orig_words[word_count].isupper() ):
 					new_word = new_word.upper()
-				elif ( orig_words[word_count][1].isupper() ):
+				elif ( len(orig_words[word_count]) > 1 and orig_words[word_count][1].isupper() ):
 					new_word = new_word.upper()
 				elif ( orig_words[word_count][0].isupper() ):
 					new_word = new_word.title()
